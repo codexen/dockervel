@@ -1,13 +1,13 @@
+docker ps
 docker-compose up -d  
 docker-compose down
 docker-compose restart
-docker ps
 docker volume ls
 docker volume inspect VOLUME_NAME
 docker logs CONTAINER_NAME
-docker exec -it mukto_apache /bin/bash
-docker exec -i mukto_mysql mysql -uUSERNAME -pPASSWORD mukto < ~/Downloads/mukto.sql
-docker exec mukto_php php artisan
+docker exec -it CONTAINER_APACHE /bin/bash
+docker exec -i CONTAINER_MYSQL mysql -uUSERNAME -pPASSWORD DBNAME < ~/pathto/file.sql
+docker exec CONTAINER_PHP php artisan
 
 
 #production
